@@ -1,0 +1,114 @@
+<!DOCTYPE>
+<html>
+<head>
+
+
+
+<!-- custom scroll bars -->
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="jquery.mCustomScrollbar.css">
+
+
+
+
+
+
+
+
+
+
+
+  <title>Feelings</title>
+
+<!--jQuery CDN-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+
+
+<meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #map {
+        height: 100%;
+      }
+      
+      div.scroll {
+        background-color: argb(0,0,0,0);
+        width: 470px;
+        height: 470px;
+        overflow: hidden;
+        position: absolute;
+        top:0px;
+        left:-30px;
+        z-index: 10;
+
+      }
+
+    </style>
+
+</head>
+
+<!--javascript-->
+<script type="text/javascript" src="feelings.js"></script>
+
+<body>
+
+<div class="scroll">
+
+
+<div id="demo">
+
+
+      <div class="content mCustomScrollbar">
+
+        <h2>Welcome!</h2>
+        <hr />
+        <p>Click anywhere on the map</p>
+
+        <div id="results"></div>
+
+        <button type="button" id="btn">Click Me!</button>
+
+      </div>  
+
+
+</div>
+
+</div>
+
+
+<div id="map"></div>
+
+
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgu8V2_XNGoVDCRSTviymDuNqU2ySfzrU&callback=initMap"
+    async defer></script>
+
+
+
+
+<!-- custom scrollbar plugin -->
+<script src="jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script>
+  (function($){
+    $(window).on("load",function(){
+      
+      $("#content-1").mCustomScrollbar({
+        theme:"minimal"
+      });
+      
+    });
+  })(jQuery);
+</script>
+
+
+</body>
+</html>
