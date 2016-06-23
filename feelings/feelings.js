@@ -7,7 +7,7 @@
 
 // use YOUR OWN KEY!!!!
 // needs to be updated
-var apiKey = "ca370d51a054836007519a00ff4ce59e";
+var apiKey = "87d4ef71bdff0695666b4d895cb3b651";
 	
 
 // create variables
@@ -117,19 +117,19 @@ var imageFlag = 'pbjelly.gif';
 // so when you click it puts a pin there 
 // EVENT LISTENER - click on map
 // here!!!
-google.maps.event.addListener(map, 'click', function(event) {
+google.maps.event.addListener(map, 'click', function(eventFTW) {
 
     marker = new google.maps.Marker({
-    	position: event.latLng, 
+    	position: eventFTW.latLng, 
     	map: map,
-   	    icon: imageFlag,
- 		optimized: false,
+   	  icon: imageFlag,
+ 	    optimized: false,
     });
 
 
 	//get photos from location where I clicked
 
-    loadPhotos(event.latLng.lat(),event.latLng.lng());
+    loadPhotos(eventFTW.latLng.lat(),eventFTW.latLng.lng());
 
 }); // end map click listener
 
@@ -141,29 +141,29 @@ google.maps.event.addListener(map, 'click', function(event) {
 //==========================================
 
 
-// starting marker
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    icon: imageFlag,
-    optimized: false,
-    title: 'hello world'
-  });
+// // starting marker
+//   var marker = new google.maps.Marker({
+//     position: myLatLng,
+//     map: map,
+//     icon: imageFlag,
+//     optimized: false,
+//     title: 'hello world'
+//   });
 
 
 
-// add another marker  -- this code works
-myLatlng = new google.maps.LatLng(temp1+1,temp2+1);
+// // add another marker  -- this code works
+// myLatlng = new google.maps.LatLng(temp1+1,temp2+1);
 
-	var marker = new google.maps.Marker({
-	    position: myLatlng,
-	    title:"Hello World!"
-	});
+// 	var marker = new google.maps.Marker({
+// 	    position: myLatlng,
+// 	    title:"Hello World!"
+// 	});
 
-	// To add the marker to the map, call setMap();
-	marker.setMap(map);
+// 	// To add the marker to the map, call setMap();
+// 	marker.setMap(map);
   
-}
+}//END OF GOOGLE MAPS INITIATION FUNCTION
 //========================================
 // END OF GOOGLE MAPS INITIATION FUNCTION
 //========================================
@@ -175,21 +175,21 @@ myLatlng = new google.maps.LatLng(temp1+1,temp2+1);
 // code I found -- doesn't work yet
 //======================================
 
-function addMyMarker() { //function that will add markers on button click
+// function addMyMarker() { //function that will add markers on button click
 
-	alert("hello");
+// 	alert("hello");
 
-myLatlng = new google.maps.LatLng(temp1+1,temp2+1);
+// myLatlng = new google.maps.LatLng(temp1+1,temp2+1);
 
 
-    var marker = new google.maps.Marker({
-        position:myLatlng,
-        map: map,
-        title:"This a new marker!"
-    });
+//     var marker = new google.maps.Marker({
+//         position:myLatlng,
+//         map: map,
+//         title:"This a new marker!"
+//     });
 
-    marker.setMap(map);
-}
+//     marker.setMap(map);
+// }
 
 //======================================
 // trying to get it work after initialization
@@ -197,22 +197,22 @@ myLatlng = new google.maps.LatLng(temp1+1,temp2+1);
 //=======================================
 
 
-function placemarker(){
+// function placemarker(){
 
-      temp1 = 41.5;
-      temp2 = -74.5;
+//       temp1 = 41.5;
+//       temp2 = -74.5;
 
-// add another marker
-  myLatLng2 = {lat: temp1, lng: temp2};
+// // add another marker
+//   myLatLng2 = {lat: temp1, lng: temp2};
 
-  marker = new google.maps.Marker({
-    position: myLatLng2,
-    map: map,
-    title: 'Hello World 2!'
-  });
-  // google maps marker
+//   marker = new google.maps.Marker({
+//     position: myLatLng2,
+//     map: map,
+//     title: 'Hello World 2!'
+//   });
+//   // google maps marker
 
-}
+// }
 
 
 

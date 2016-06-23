@@ -11,14 +11,6 @@
 
 
 
-
-
-
-
-
-
-
-
   <title>Feelings</title>
 
 <!--jQuery CDN-->
@@ -61,11 +53,9 @@
 
 <body>
 
-<div class="scroll">
+  <div class="scroll">
 
-
-<div id="demo">
-
+    <div id="demo"> <!-- has the custom scroll bar style -->
 
       <div class="content mCustomScrollbar">
 
@@ -73,30 +63,27 @@
         <hr />
         <p>Click anywhere on the map</p>
 
-        <div id="results"></div>
+        <div id="results"></div> <!-- for the loaded photos -->
 
         <button type="button" id="btn">Click Me!</button>
 
       </div>  
 
+    </div> <!-- end of demo nest -->
 
-</div>
-
-</div>
+  </div>
 
 
 <div id="map"></div>
 
-
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgu8V2_XNGoVDCRSTviymDuNqU2ySfzrU&callback=initMap"
-    async defer></script>
+    async defer></script> <!-- GOOGLE MAP API-->
 
 
 
-
-<!-- custom scrollbar plugin -->
-<script src="jquery.mCustomScrollbar.concat.min.js"></script>
-
+<!-- custom scrollbar plugin / JS LIBRARY-->
+<script src="jquery.mCustomScrollbar.concat.min.js"></script> 
+ 
 <script>
   (function($){
     $(window).on("load",function(){
@@ -108,7 +95,6 @@
     });
   })(jQuery);
 </script>
-
-
+<!-- END OF JS LIBRARY-->
 </body>
 </html>
