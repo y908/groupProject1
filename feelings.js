@@ -93,6 +93,20 @@ function initMap() {
     // here!!!
     google.maps.event.addListener(map, 'click', function(eventFTW) {
 
+
+      // perPage = 3;
+      perPage = document.getElementById("imgAppear").value;
+
+      if (isNaN(perPage)){
+        alert("lol");
+
+      }
+      else if (perPage > 20){
+
+        alert("too many pictures");
+      }
+      else{
+
        marker = new google.maps.Marker({
          position: eventFTW.latLng, 
          map: map,
@@ -101,12 +115,14 @@ function initMap() {
          optimized: false,
        });
 
-      // perPage = 3;
-      perPage = document.getElementById("imgAppear").value;
-      
-     //get photos from location where I clicked
+
+      //get photos from location where I clicked
 
        loadPhotos(eventFTW.latLng.lat(),eventFTW.latLng.lng());
+
+      }
+
+   
 
 
     }); // end map click listener
@@ -134,7 +150,7 @@ function loadPhotos(aaa,bbb){
     //console.log(jsonFTW);
     
     for (i=0; i<perPage; i++){ 
-      var imageURL = "https://farm"+jsonFTW.photos.photo[i].farm+".staticflickr.com/"+jsonFTW.photos.photo[i].server+"/"+jsonFTW.photos.photo[i].id+"_"+jsonFTW.photos.photo[i].secret+".jpg";
+      var imageURL = "https://farm"+jsonFTW.photos.photo[i].farm+".staticflickr.com/"+jsonFTW.photos.photo[i].server+"/"+jsonFTW.photos.photo[i].id+"_"+jsonFTW.photos.photo[i].secret+"_b.jpg";
       
       var imageURLsmall = "https://farm"+jsonFTW.photos.photo[i].farm+".staticflickr.com/"+jsonFTW.photos.photo[i].server+"/"+jsonFTW.photos.photo[i].id+"_"+jsonFTW.photos.photo[i].secret+"_s.jpg";
 
