@@ -103,7 +103,7 @@ function initMap() {
       }
       else if (perPage > 20){
 
-        alert("too many pictures");
+        alert("That's too many pictures to load!");
       }
       else{
 
@@ -180,16 +180,5 @@ $(document).ready(function() {
 
    });
 
-/*
-  /*$('#btn').on('click', function() {
-    //alert("hi");
-        temp1 = 41.5;
-        temp2 = -74.5;
-      myLatLng2 = {lat: temp1, lng: temp2};
-  //    addmarker(myLatLng2);
-  //      addMyMarker();
-  })*/
-
-// end of *** code
 
 });
