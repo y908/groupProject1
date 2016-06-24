@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <!-- custom scroll bars -->
   <link href="style.css" rel="stylesheet">
+  <!-- custom scroll bars -->
+  <link href="style2.css" rel="stylesheet">
+  
+
+
   <link href="jquery.mCustomScrollbar.css" rel="stylesheet">
-  <title>Feelings</title><!--jQuery CDN-->
+  <title>World Picks</title><!--jQuery CDN-->
 
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type=
   "text/javascript">
@@ -33,9 +41,7 @@
          top:0px;
          left:-30px;
          z-index: 10;
-
        }
-
   </style><!-- end of css style -->
 
   <script src="feelings.js" type="text/javascript">
@@ -44,15 +50,24 @@
 <body>
 
 <!-- loaded pictures box
- -->  <div class="scroll">
+ --><div class="scroll">
     <div id="demo">
       <!-- has the custom scroll bar style -->
       <div class="content mCustomScrollbar">
-        <h2>Welcome!</h2>
+        <h2>World Pics!</h2>
         <hr>
-        <p>Click anywhere on the map</p>
+        <p>See photos from around the world! Click anywhere on the map! Images from that area will appear in a list below. If no images were uploaded from that location, they will not appear on the list.</p>
+       <!--  <div class="form-group">
+            <label for="usr">Select search radius in miles:</label>
+            <input type="text" class="form-control" id="miles">
+        </div> -->
+        <div class="form-group">
+          <label for="pwd">How many images do you want to see? (Write a number and click on the map)</label>
+          <input type="text" class="form-control" id="imgAppear" value="3">
+        </div>
+      <!--   <button type="button" id="submitter">Submit</button>  -->
         <div id="results"></div><!-- for the loaded photos -->
-        <!--  <button type="button" id="btn">Click Me!</button> -->
+        
       </div>
     </div><!-- end of demo nest -->
   </div>
